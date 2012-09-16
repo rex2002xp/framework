@@ -1,4 +1,5 @@
 <?php
+
 namespace core;
 
 /**
@@ -11,7 +12,7 @@ namespace core;
  * @package core
  */
 class Bootstrap {
-    
+
     /**
      * Metodo para ejecutar la aplicacion.
      * 
@@ -22,40 +23,25 @@ class Bootstrap {
      * @param Request $request
      * @throws Exception
      */
-    public static function Run(Request $request)
-    {
-        $controllerName = '\application\controllers\\'.$request->getController() . 'Controller';        
+    public static function Run(Request $request) {
+
+        $controllerName = '\application\controllers\\' . $request->getController() . 'Controller';
         $action = $request->getAction();
         $parameters = $request->getParameters();
-               
-        if (class_exists($controllerName))
-        {
+
+        if (class_exists($controllerName)) {
             $controller = new $controllerName;
-            
-            if(is_callable(array($controller, $action))){
-            $action = $request->getAction();
-            }
-            else{
+            if (is_callable(array($controller, $action))) {
+                $action = $request->getAction();
+            } else {
                 $action = 'index';
             }
-            
-            if(isset($parameters)){
+            if (isset($parameters)) {
                 call_user_func_array(array($controller, $action), $parameters);
-            }
-            else{
+            } else {
                 call_user_func(array($controller, $action));
             }
         }
-        else {
-            throw new Exception("No es posible cargar la clase : $controllerName" );
-        }
-
-        
-
-        
-        
-    }   
-    
+    }
 }
-
 ?>
