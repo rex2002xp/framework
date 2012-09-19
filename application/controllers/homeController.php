@@ -16,13 +16,15 @@ class homeController extends \core\Controller{
 
     public function index() {
         include_once ROOT . 'lib' . DS . 'Twig' . DS . 'Autoloader.php';
-        \Twig_Autoloader::register();
-        $path = ROOT . 'templates' . DS . 'default'.DS;
-        $loader = new \Twig_Loader_Filesystem($path);
-        $twig = new \Twig_Environment($loader, array('cache' => ROOT . 'cache','debug'=>true,));
+        //\Twig_Autoloader::register();
+        //$path = ROOT . 'templates' . DS . 'default'.DS;
+        //$loader = new \Twig_Loader_Filesystem($path);
+        //$twig = new \Twig_Environment($loader, array('cache' => ROOT . 'cache','debug'=>true,));
         
-        $template = $twig->loadTemplate('index.html.twig');        
-        echo $twig->render('index.html.twig', array('name' => 'Fabien'));
+        //$template = $twig->loadTemplate('index.html.twig');
+        
+        $this->view->render('index.html.twig', array('name' => 'Fabien'));
+        
     }
 }
 
