@@ -13,10 +13,7 @@ try
 
     set_include_path(ROOT);
 
-    spl_autoload_register();
-
-
-    \Twig_Autoloader::register();
+    spl_autoload_register();    
     
     \core\Bootstrap::run(new \core\Request());
 }

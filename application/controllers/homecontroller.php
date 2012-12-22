@@ -1,0 +1,22 @@
+<?php
+namespace application\controllers;
+
+/**
+ * Controlador Default.
+ *
+ * @author Victor Hugo Cornejo Calderon <victor.cornejo@iguanadas.com>
+ * @package application\controllers
+ */
+class homeController extends \core\Controller{
+    
+    public function __construct() {
+        parent::__construct();
+        
+    }
+
+    public function index() {        
+        echo 'Home';
+    }
+}
+
+?>
