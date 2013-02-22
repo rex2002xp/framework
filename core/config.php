@@ -11,6 +11,7 @@ namespace core;
 class Config {    
     
     private $_file;
+    
     /**
      * Objeto para administrar los parametros de configuracion de la aplicacion.
      */
