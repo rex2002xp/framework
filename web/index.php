@@ -19,6 +19,8 @@ try
 }
 catch (Exception $ex)
 {
-    print_r($ex->getMessage());
+    $error = new \application\controllers\errorController();
+    $error->index($ex->getMessage(), $ex->getCode());
+    
 }
 ?>

@@ -29,12 +29,13 @@ class Bootstrap {
         $action = $request->getAction();
         $parameters = $request->getParameters();
 
-        if (class_exists($controllerName)) {
+        
+        if (class_exists($controllerName)) {            
             $controller = new $controllerName;
             if (is_callable(array($controller, $action))) {
                 $action = $request->getAction();
             } else {
-                $action = 'index';
+                throw new \Exception("Ruta no valida",1002);
             }
             if (isset($parameters)) {
                 call_user_func_array(array($controller, $action), $parameters);
