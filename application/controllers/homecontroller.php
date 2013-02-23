@@ -10,12 +10,11 @@ namespace application\controllers;
 class homeController extends \core\Controller{
     
     public function __construct() {
-        parent::__construct();
-        
+        parent::__construct();        
     }
 
     public function index() {        
-        echo 'Home';
+        $this->_view->render();
     }
 }
 
