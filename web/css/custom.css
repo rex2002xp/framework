@@ -1,0 +1,98 @@
+body {
+    line-height:1.5;    
+    background-color:#F2F2F2;
+    color:#666;    
+}
+
+#header{
+    background-color: #282828;
+    width:100%;
+    background:-webkit-gradient(
+        linear,
+        left bottom,
+        left top,
+        color-stop(0.2, rgb(39,38,34)),
+        color-stop(0.8, rgb(50,50,50))
+        );
+    background: -moz-linear-gradient(
+        center bottom,
+        rgb(39,38,34) 20%,
+        rgb(50,50,50) 80%
+        );
+    height: 80px;
+}
+
+#headertitle {
+    color: #FFC806;
+    font:bold 2.4em/26px 'Trebuchet MS',Trebuchet,Arial,sans-serif;
+    letter-spacing:-0.02em;
+    padding:20px 0 22px;
+    text-shadow:1px 1px 3px #111;
+}
+#title span {
+    color: #FFC806; 
+}
+
+#infoUser {
+    color: #fff;
+    text-align: right;
+    margin-top: 15px;
+    font-size: 14px;
+}
+#infoUser img {    
+    width: 32px;
+    height: 32px;
+}
+#infoUser b {
+    color: #fff;
+}
+#infoUser a {
+    color: darkorange;
+    padding: 0;
+    text-decoration: none;
+}
+#infoUser small {
+    font-size: 12px;
+}
+img.avatar {
+    background: #fff;
+    float: right;
+    margin: 5px 0 0 8px;
+    padding: 4px;
+}
+
+#pagetitle {
+    background-color: #5D9ADF;
+    border-top: 4px solid #266DBB;
+    border-bottom: 1px solid #2A7AD2;
+    float: left;
+    width: 100%;
+    background: -webkit-gradient( linear, left bottom, left top, color-stop(0.2, rgb(80,146,220)), color-stop(0.8, rgb(107,163,226)) );
+    background: -moz-linear-gradient( center bottom, rgb(80,146,220) 20%, rgb(107,163,226) 80% );
+}
+
+#pagetitle h1 {
+    color: #fff;
+    font-size: 1.6em;
+    padding: 12px 0;
+    text-shadow: 0 -1px 1px #2A7AD2;
+    margin: 0;
+    top: 0;
+    line-height: 1.2em;
+    float: left;
+}
+
+#content {
+    width: 100%;
+    height: 83%;
+    background-color: #ffffff;
+}
+#footer {
+    width: 100%;
+    height: 4%;    
+}
+#footer p {
+    font-size: 10px;
+    text-align: center;
+    margin: 5px 0 0 0
+}

@@ -11,8 +11,58 @@
             }
             ?>
         </title>
+        <!-- Grid 960  -->
+        <link rel="stylesheet" type="text/css" media="all" href="/css/reset.css" />
+        <link rel="stylesheet" type="text/css" media="all" href="/css/text.css" />
+        <link rel="stylesheet" type="text/css" media="all" href="/css/960_fluid.css" />
+
+        <link rel="stylesheet" type="text/css" media="all" href="/css/custom.css" />
+
     </head>
     <body>
-        <?php $this->getView(); ?>
+        <div id="header">
+            <div class="container_16">
+                <div class="grid_8">
+                    <div id="headertitle"><span>Panel de Control</span></div>
+                </div>
+                <div class="grid_8">
+                    <div id="infoUser">
+                        <a href="/user/profile"><img class="avatar" src="/img/user_32.png" alt=""></a>
+                        Autenticado como <b>Administrador</b>
+                        <span>|</span> <a href="/user/profile">Perfil</a>
+                        <span>|</span> <a href="/user/logout">Salir</a><br>
+                        <small>Usted tiene <a href="/user/message" class="high"><b>2</b> nuevos mensajes!</a></small>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div id="pagetitle">
+            <div class="container_16">
+                <div>
+                    <div class="grid_16"><h1><?php echo $this->title; ?></h1></div>
+                </div>
+                <div class="clear"></div>
+            </div>            
+        </div>
+        <div id="content">
+            <div class="container_16">
+                <div class="grid_4">
+                    Menu
+                </div>
+                <div class="grid_12">
+                    <?php echo $this->getView(); ?>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div id="footer">
+            <div class="container_16">
+                <div>
+                    <div class="grid_16"><p>Panel de Control. Todos los Derechos Reservados.</p></div>
+                </div>
+                <div class="clear"></div>
+            </div>            
+        </div>
     </body>
 </html>

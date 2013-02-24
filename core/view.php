@@ -24,7 +24,7 @@ class View {
     }
 
     public function render($viewname = false, $item = false, $template = false) {
-        if ($this->_template == false) {
+        if ($template == false) {
             $this->_template = $this->_config['application']['nameTemplate'];
         } else {
             $this->_template = $template;

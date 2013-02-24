@@ -14,8 +14,9 @@ abstract class Controller {
     public function __construct() {        
         $configFile = new \core\Config(FILE_CONFIG_APP);
         $configuration = $configFile->getConfig();
-        
-        $this->_view = new \core\View(new \core\Request);
+        $request = new \core\Request;
+        $this->_view = new \core\View($request);
+        $this->_view->title = ucwords($request->getAction());
     }
     
     abstract public function index();    
