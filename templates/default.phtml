@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -12,18 +12,18 @@
             ?>
         </title>
         <!-- Grid 960  -->
-        <link rel="stylesheet" type="text/css" media="all" href="/css/reset.css" />
-        <link rel="stylesheet" type="text/css" media="all" href="/css/text.css" />
-        <link rel="stylesheet" type="text/css" media="all" href="/css/960_fluid.css" />
-
-        <link rel="stylesheet" type="text/css" media="all" href="/css/custom.css" />
+        <link rel="stylesheet" type="text/css" media="screen" href="/css/reset.css" />
+        <link rel="stylesheet" type="text/css" media="screen" href="/css/text.css" />        
+        <link rel="stylesheet" type="text/css" media="screen" href="/css/960_fluid.css" />
+        <!--[if IE]> <link rel="stylesheet" type="text/css" media="screen" href="/css/960.css" /> <![endif]--> 
+        <link rel="stylesheet" type="text/css" media="screen" href="/css/custom.css" />
 
     </head>
     <body>
         <div id="header">
             <div class="container_16">
                 <div class="grid_8">
-                    <div id="headertitle"><span>Panel de Control</span></div>
+                    <div id="headertitle"><span>Framework</span></div>
                 </div>
                 <div class="grid_8">
                     <div id="infoUser">
@@ -34,7 +34,7 @@
                         <small>Usted tiene <a href="/user/message" class="high"><b>2</b> nuevos mensajes!</a></small>
                     </div>
                 </div>
-                <div class="clear"></div>
+                <div class="clear">&nbsp;</div>
             </div>
         </div>
         <div id="pagetitle">
@@ -42,7 +42,7 @@
                 <div>
                     <div class="grid_16"><h1><?php echo $this->title; ?></h1></div>
                 </div>
-                <div class="clear"></div>
+                <div class="clear">&nbsp;</div>
             </div>            
         </div>
         <div id="content">
@@ -53,7 +53,7 @@
                 <div class="grid_12">
                     <?php echo $this->getView(); ?>
                 </div>
-                <div class="clear"></div>
+                <div class="clear">&nbsp;</div>
             </div>
         </div>
         <div id="footer">
@@ -61,7 +61,7 @@
                 <div>
                     <div class="grid_16"><p>Panel de Control. Todos los Derechos Reservados.</p></div>
                 </div>
-                <div class="clear"></div>
+                <div class="clear">&nbsp;</div>
             </div>            
         </div>
     </body>
