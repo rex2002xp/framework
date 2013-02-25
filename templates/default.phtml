@@ -2,67 +2,71 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>
-            <?php
-            if (isset($this->titulo)) {
-                echo $this->titulo;
-            } else {
-                echo "Framework";
-            }
-            ?>
-        </title>
-        <!-- Grid 960  -->
-        <link rel="stylesheet" type="text/css" media="screen" href="/css/reset.css" />
-        <link rel="stylesheet" type="text/css" media="screen" href="/css/text.css" />        
-        <link rel="stylesheet" type="text/css" media="screen" href="/css/960_fluid.css" />
-        <!--[if IE]> <link rel="stylesheet" type="text/css" media="screen" href="/css/960.css" /> <![endif]--> 
-        <link rel="stylesheet" type="text/css" media="screen" href="/css/custom.css" />
+            <title>
+                <?php
+                if (isset($this->titulo)) {
+                    echo $this->titulo;
+                } else {
+                    echo "Framework";
+                }
+                ?>
+            </title>
+            <!-- Grid 960  -->
+            <link rel="stylesheet" type="text/css" media="screen" href="/css/reset.css" />
+            <link rel="stylesheet" type="text/css" media="screen" href="/css/text.css" />        
+            <link rel="stylesheet" type="text/css" media="screen" href="/css/960_fluid.css" />
+            <!-- Estilos de la aplicacion -->
+            <link rel="stylesheet" type="text/css" media="screen" href="/css/custom.css" />
+            <!-- Jquery -->
+            <link rel="stylesheet" type="text/css" media="screen" href="/jquery/css/default/jquery-ui-1.10.1.custom.min.css" />
+            <script src="/jquery/js/jquery-1.9.1.js"></script>
+            <script src="/jquery/js/jquery-ui-1.10.1.custom.js"></script>
+            <!-- Funciones Jquery para usuabilidad de la aplicacion -->
+            <script src="/js/application.js"></script>
 
     </head>
     <body>
-        <div id="header">
-            <div class="container_16">
-                <div class="grid_8">
-                    <div id="headertitle"><span>Framework</span></div>
-                </div>
-                <div class="grid_8">
-                    <div id="infoUser">
-                        <a href="/user/profile"><img class="avatar" src="/img/user_32.png" alt=""></a>
-                        Autenticado como <b>Administrador</b>
-                        <span>|</span> <a href="/user/profile">Perfil</a>
-                        <span>|</span> <a href="/user/logout">Salir</a><br>
+
+        <div class="container_16">
+            <div class="grid_8">
+                <div id="headertitle"><span>Framework</span></div>
+            </div>
+            <div class="grid_8">
+                <div id="infoUser">
+                    <a href="/user/profile"><img class="avatar" src="/img/user_32.png" alt=""></a>
+                    Autenticado como <b>Administrador</b>
+                    <span>|</span> <a href="/user/profile">Perfil</a>
+                    <span>|</span> <a href="/user/logout">Salir</a><br>
                         <small>Usted tiene <a href="/user/message" class="high"><b>2</b> nuevos mensajes!</a></small>
+                </div>
+            </div>
+            <div class="clear">&nbsp;</div>
+
+            <div class="grid_16">
+                <div id="pagetitle"><h1><?php echo $this->title; ?></h1></div>
+            </div>
+            <div class="clear">&nbsp;</div>
+
+            <div class="grid_3">
+                <div id="accordion">
+                    <h3>Usuarios</h3>
+                    <div>
+                        <lu>
+                            <li><a href="/user/index">Manager</a></li>
+                            <li><a href="/user/add">Creacion</a></li>
+                            <li><a href="/user/search">Busqueda</a></li>
+                        </lu>
                     </div>
+                    <h3>Grupos</h3>
+                    <div>&nbsp;</div>
+                    <h3>Permisos</h3>
+                    <div>&nbsp;</div>
                 </div>
-                <div class="clear">&nbsp;</div>
             </div>
-        </div>
-        <div id="pagetitle">
-            <div class="container_16">
-                <div>
-                    <div class="grid_16"><h1><?php echo $this->title; ?></h1></div>
-                </div>
-                <div class="clear">&nbsp;</div>
-            </div>            
-        </div>
-        <div id="content">
-            <div class="container_16">
-                <div class="grid_4">
-                    Menu
-                </div>
-                <div class="grid_12">
-                    <?php echo $this->getView(); ?>
-                </div>
-                <div class="clear">&nbsp;</div>
-            </div>
-        </div>
-        <div id="footer">
-            <div class="container_16">
-                <div>
-                    <div class="grid_16"><p>Panel de Control. Todos los Derechos Reservados.</p></div>
-                </div>
-                <div class="clear">&nbsp;</div>
-            </div>            
-        </div>
+            <div class="grid_13"><?php $this->getView(); ?></div>
+            <div class="clear">&nbsp;</div>
+            <div class="prefix_4 grid_8"><p id="footer">Panel de Control. Todos los Derechos Reservados.</p></div>
+            <div class="clear">&nbsp;</div>
+        </div>        
     </body>
 </html>
