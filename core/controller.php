@@ -11,6 +11,7 @@ namespace core;
 abstract class Controller {
     protected $_view;
     
+    
     public function __construct() {        
         $configFile = new \core\Config(FILE_CONFIG_APP);
         $configuration = $configFile->getConfig();

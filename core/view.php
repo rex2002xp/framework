@@ -23,7 +23,7 @@ class View {
         $this->_config = $objeto->getConfig();
     }
 
-    public function render($viewname = false, $item = false, $template = false) {
+    public function render($viewname = false, $item = false, $template = false, $controller = false) {
         if ($template == false) {
             $this->_template = $this->_config['application']['nameTemplate'];
         } else {
@@ -31,7 +31,13 @@ class View {
         }
         if ($viewname != false) {
             $this->_view = $viewname;
+        }        
+        $this->_item = $item;
+        if ($controller != false)
+        {
+            $this->_controller = $controller;
         }
+        
         include_once $this->getTemplate();
     }
 
@@ -48,11 +54,16 @@ class View {
         $pathView = ROOT . DS . "application" . DS . "views" . DS . $this->_controller . DS . $this->_view . '.phtml';
         if (is_readable($pathView)) {
             include_once($pathView);
-        } else {
-            print_r($pathView);
+        } else {            
             throw new \Exception("No fue posible carga la vista solicitada.", 10001);
         }
     }
+    
+    public function getItem() {
+        return $this->_item;
+    }
+    
+
 
 }
 

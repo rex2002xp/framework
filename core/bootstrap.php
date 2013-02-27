@@ -35,13 +35,17 @@ class Bootstrap {
             if (is_callable(array($controller, $action))) {
                 $action = $request->getAction();
             } else {
-                throw new \Exception("Ruta no valida",1002);
+                throw new \core\AppException("Ruta no valida",1002);
             }
             if (isset($parameters)) {
                 call_user_func_array(array($controller, $action), $parameters);
             } else {
                 call_user_func(array($controller, $action));
             }
+        }
+        else
+        {
+            throw new \core\AppException("Controlador solicitada no es valido.",1002);
         }
     }
 }

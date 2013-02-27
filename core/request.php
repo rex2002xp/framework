@@ -76,6 +76,10 @@ class Request {
     public function getParameters() {
         return $this->_parameters;
     }
+    
+    public function setController($controller) {
+        return $this->_controller = $controller;
+    }
 
 }
 

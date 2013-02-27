@@ -13,14 +13,9 @@ class homeController extends \core\Controller{
         parent::__construct();        
     }
 
-    public function index() { 
-        $this->_view->render();
-    }
-    
-    public function begin()
-    {
+    public function index() {
         $this->_view->title = "Dashboard";
-        $this->_view->render("index");
+        $this->_view->render();
     }
 }
 

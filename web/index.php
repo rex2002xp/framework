@@ -17,10 +17,15 @@ try
     
     \core\Bootstrap::run(new \core\Request());
 }
-catch (Exception $ex)
+ catch (\core\AppException $ex)
+ {
+     $error = new \application\controllers\errorController();
+    $error->app($ex);
+ }
+catch (\Exception $ex)
 {
     $error = new \application\controllers\errorController();
-    $error->index($ex->getMessage(), $ex->getCode());
+    $error->system($ex);
     
 }
 ?>
