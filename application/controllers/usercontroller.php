@@ -7,7 +7,7 @@ namespace application\controllers;
  * @author Victor Hugo Cornejo Calderon <victor.cornejo@iguanadas.com>
  * @package application\controllers
  */
-class profileController extends \core\Controller{
+class userController extends \core\Controller{
     
     public function __construct() {
         parent::__construct();        

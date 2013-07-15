@@ -28,9 +28,9 @@ class Bootstrap {
         $controllerName = '\application\controllers\\' . $request->getController() . 'Controller';
         $action = $request->getAction();
         $parameters = $request->getParameters();
-
         
-        if (class_exists($controllerName)) {            
+        if (class_exists($controllerName)) {
+            
             $controller = new $controllerName;
             if (is_callable(array($controller, $action))) {
                 $action = $request->getAction();
@@ -42,9 +42,10 @@ class Bootstrap {
             } else {
                 call_user_func(array($controller, $action));
             }
+            
         }
         else
-        {
+        {            
             throw new \core\AppException("Controlador solicitada no es valido.",1002);
         }
     }

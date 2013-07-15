@@ -19,7 +19,7 @@ try
 }
  catch (\core\AppException $ex)
  {
-     $error = new \application\controllers\errorController();
+    $error = new \application\controllers\errorController();
     $error->app($ex);
  }
 catch (\Exception $ex)
